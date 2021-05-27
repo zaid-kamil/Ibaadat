@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.ibaadat.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_tazbiFragment"
+            app:destination="@id/tazbiFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_surahDuaFragment"
+            app:destination="@id/surahDuaFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_hijriCalendar"
+            app:destination="@id/hijriCalendar" />
+        <action
+            android:id="@+id/action_FirstFragment_to_namazSchedulerFragment"
+            app:destination="@id/namazSchedulerFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_qiblaLocator2"
+            app:destination="@id/qiblaLocator" />
+    </fragment>
+    <fragment
+        android:id="@+id/hijriCalendar"
+        android:name="com.example.ibaadat.HijriCalendar"
+        android:label="fragment_hijri_calendar"
+        tools:layout="@layout/fragment_hijri_calendar" />
+    <fragment
+        android:id="@+id/tazbiFragment"
+        android:name="com.example.ibaadat.TazbiFragment"
+        android:label="fragment_tazbi"
+        tools:layout="@layout/fragment_tazbi" />
+    <fragment
+        android:id="@+id/surahDuaFragment"
+        android:name="com.example.ibaadat.SurahDuaFragment"
+        android:label="fragment_surah_dua"
+        tools:layout="@layout/fragment_surah_dua" >
+        <action
+            android:id="@+id/action_surahDuaFragment_to_pdfEnglishQuranFragment"
+            app:destination="@id/pdfEnglishQuranFragment" />
+        <action
+            android:id="@+id/action_surahDuaFragment_to_pdfHindiQuranFragment"
+            app:destination="@id/pdfHindiQuranFragment" />
+        <action
+            android:id="@+id/action_surahDuaFragment_to_audioPlayerFragment"
+            app:destination="@id/audioPlayerFragment" />
+        <action
+            android:id="@+id/action_surahDuaFragment_to_pdfUrduFragment"
+            app:destination="@id/pdfUrduFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/namazSchedulerFragment"
+        android:name="com.example.ibaadat.NamazSchedulerFragment"
+        android:label="fragment_namaz_scheduler"
+        tools:layout="@layout/fragment_namaz_scheduler" />
+    <fragment
+        android:id="@+id/pdfEnglishQuranFragment"
+        android:name="com.example.ibaadat.PdfEnglishQuranFragment"
+        android:label="fragment_pdf_english_quran"
+        tools:layout="@layout/fragment_pdf_english_quran" />
+    <fragment
+        android:id="@+id/pdfHindiQuranFragment"
+        android:name="com.example.ibaadat.pdfHindiQuranFragment"
+        android:label="fragment_pdf_hindi_quran"
+        tools:layout="@layout/fragment_pdf_hindi_quran" />
+    <fragment
+        android:id="@+id/audioPlayerFragment"
+        android:name="com.example.ibaadat.AudioPlayerFragment"
+        android:label="fragment_audio_player"
+        tools:layout="@layout/fragment_audio_player" />
+    <fragment
+        android:id="@+id/pdfUrduFragment"
+        android:name="com.example.ibaadat.pdfUrduFragment"
+        android:label="fragment_pdf_urdu"
+        tools:layout="@layout/fragment_pdf_urdu" />
+    <fragment
+        android:id="@+id/qiblaLocator"
+        android:name="com.example.ibaadat.QiblaLocator"
+        android:label="fragment_qibla_locator"
+        tools:layout="@layout/fragment_qibla_locator" />
+</navigation>
